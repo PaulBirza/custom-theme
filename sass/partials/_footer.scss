@@ -1,0 +1,44 @@
+/* Footer
+-------------------------------------------------- */
+
+.footer-social {
+	float: right;
+	li {
+		float: left;
+		clear: none;
+		list-style: none;
+		margin-left: 0.25em;
+	}
+}
+
+// 1199px or smaller
+@include bp($max: #{$large - 1}) {
+	.footer-copyright,
+	.footer-menu,
+	.footer-social {
+		width: 100%;
+		text-align: center;
+		margin: 1em auto;
+		padding: 0;
+	}
+	.footer-menu,
+	.footer-social {
+		float: none;
+		clear: both;
+		display: table;
+	}
+	.footer-social {
+		width: auto;
+		li {
+			margin: 0;
+		}
+	}
+}
+
+// @include bp($max: #{$small - 1}) {
+// 	// .footer-copyright {
+// 	//     // width: 100%;
+// 	//     // text-align: center;
+// 	//     display:none;
+// 	// }
+// }
